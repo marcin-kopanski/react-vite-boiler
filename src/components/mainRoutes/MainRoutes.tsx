@@ -3,6 +3,7 @@ import { DemoLayout } from "src/components/layouts/demoLayout/DemoLayout";
 import { MainLayout } from "src/components/layouts/mainLayout/MainLayout";
 import { About } from "src/views/about/About";
 import { Home } from "src/views/home/Home";
+import { NoMatch } from "src/views/noMatch/NoMatch";
 
 export const MainRoutes = () => {
   return (
@@ -11,6 +12,7 @@ export const MainRoutes = () => {
         <Route index element={<Home />} />
         <Route path="about" element={<About />} />
         <Route path="demo/*" element={<DemoLayout />} />
+        <Route path="*" element={<NoMatch />} />
       </Route>
     </Routes>
   );
