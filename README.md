@@ -1,4 +1,4 @@
-# ViteMK ❤️‍🔥
+# eact-vite-boiler ❤️‍🔥
 
 A modern minimal Vite + React + TypeScript template with pre-configured ESLint, Prettier, Testing with Jest and Git hooks with Husky out of the box 📦
 
@@ -17,7 +17,7 @@ A modern minimal Vite + React + TypeScript template with pre-configured ESLint, 
 ## Usage
 
 ```bash
-npx degit potreco/viterc my-app
+npx degit marcin-kopanski/react-vite-boiler my-app
 
 cd my-app
 

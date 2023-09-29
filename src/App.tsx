@@ -1,11 +1,12 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { ReactQueryDevtools } from '@tanstack/react-query-devtools/build/modern/index.js';
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { FC, lazy, PropsWithChildren, Suspense, useEffect, useState } from 'react';
 
 const queryClient = new QueryClient();
 
 const ReactQueryDevtoolsProduction = lazy(() =>
-  import('@tanstack/react-query-devtools/build/modern/index.js').then((d) => ({
+  // @ts-ignore
+  import('@tanstack/react-query-devtools/production').then((d) => ({
     default: d.ReactQueryDevtools,
   })),
 );
