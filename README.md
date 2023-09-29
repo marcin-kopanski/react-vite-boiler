@@ -17,6 +17,7 @@ A modern minimal Vite + React + TypeScript template with pre-configured ESLint, 
 ## Usage
 
 ```bash
+# to clone repository run:
 npx degit marcin-kopanski/react-vite-boiler my-app
 
 cd my-app
