@@ -26,6 +26,7 @@ describe('Render the app correctly', () => {
 
     expect(button.innerHTML).toBe('count is 3');
   });
+
   test('should render the `read the docs` row', async () => {
     render(<App />);
 

@@ -11,7 +11,8 @@
     "plugin:react-hooks/recommended",
     "plugin:prettier/recommended",
     "plugin:react/jsx-runtime",
-    "prettier"
+    "prettier",
+    "plugin:@tanstack/eslint-plugin-query/recommended"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -22,7 +23,7 @@
     "sourceType": "module",
     "project": "./tsconfig.json"
   },
-  "plugins": ["react", "@typescript-eslint", "prettier", "simple-import-sort"],
+  "plugins": ["react", "@typescript-eslint", "prettier", "simple-import-sort", "@tanstack/query"],
   "settings": {
     "import/extensions": [".js", ".jsx", ".ts", ".tsx"],
     "import/resolver": {
@@ -36,6 +37,7 @@
   },
   "rules": {
     "prettier/prettier": "error",
+    "@tanstack/query/exhaustive-deps": "error",
     "react/react-in-jsx-scope": "off",
     "react/prop-types": "off",
     "react/jsx-no-bind": "off",
@@ -43,6 +45,7 @@
     "import/prefer-default-export": "off",
     "import/no-named-as-default": "off",
     "simple-import-sort/imports": "warn",
-    "simple-import-sort/exports": "warn"
+    "simple-import-sort/exports": "warn",
+    "@typescript-eslint/ban-ts-comment": "warn"
   }
 }
