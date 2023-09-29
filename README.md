@@ -1,4 +1,4 @@
-# eact-vite-boiler ❤️‍🔥
+# react-vite-boiler ❤️‍🔥
 
 A modern minimal Vite + React + TypeScript template with pre-configured ESLint, Prettier, Testing with Jest and Git hooks with Husky out of the box 📦
 
