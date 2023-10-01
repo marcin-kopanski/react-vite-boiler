@@ -1,5 +1,4 @@
-import { Link } from "react-router-dom";
-import { DemoRoutes } from "src/components/demoRoutes/DemoRoutes";
+import { Link, Outlet } from "react-router-dom";
 
 export const DemoLayout = () => {
   return (
@@ -13,7 +12,7 @@ export const DemoLayout = () => {
         </ul>
       </div>
       <div>
-        <DemoRoutes />
+        <Outlet />
       </div>
     </>
   );
