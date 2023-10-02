@@ -1,16 +1,16 @@
 import { useQueryClient } from "@tanstack/react-query";
 import { useMemo } from "react";
 import { LoaderFunction, LoaderFunctionArgs, Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
-import { DemoLayout } from "src/components/layouts/demoLayout/DemoLayout";
-import { MainLayout } from "src/components/layouts/mainLayout/MainLayout";
+import { DemoLayout } from "src/layouts/DemoLayout";
+import { MainLayout } from "src/layouts/MainLayout";
 import { UserQueries } from "src/services/demo/UserService";
 import { DEFAULT_LIMIT, DEFAULT_PAGE } from "src/utils/TableDefaults";
-import { About } from "src/views/about/About";
-import { Demo } from "src/views/demo/Demo";
-import { DemoUserDetails } from "src/views/demoUserDetails/DemoUserDetails";
-import { DemoUsers } from "src/views/demoUsers/DemoUsers";
-import { Home } from "src/views/home/Home";
-import { NoMatch } from "src/views/noMatch/NoMatch";
+import { About } from "src/pages/about/About";
+import { Demo } from "src/pages/demo/Demo";
+import { DemoUserDetails } from "src/pages/demoUserDetails/DemoUserDetails";
+import { DemoUsers } from "src/pages/demoUsers/DemoUsers";
+import { Home } from "src/pages/home/Home";
+import { NoMatch } from "src/pages/noMatch/NoMatch";
 
 export const MainRoutes = () => {
   const queryClient = useQueryClient();
