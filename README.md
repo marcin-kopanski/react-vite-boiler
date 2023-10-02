@@ -13,6 +13,7 @@ A modern minimal Vite + React + TypeScript template with pre-configured ESLint, 
 - ⚙️ [Jest](https://jestjs.io/) - Testing libraries
 - ⌨️ Absolute Imports
 - 📑 [Commitlint](https://commitlint.js.org/) - Linting your commits based on commit convention
+- [File structure](https://engineering.udacity.com/react-folder-structure-for-enterprise-level-applications-f8384eff162b) - good set of rules
 
 ## Usage
 
