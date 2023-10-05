@@ -34,17 +34,26 @@ yarn dev
 
 <p>In this project, you can run the following scripts:</p>
 
-| Script        | Description                                                                 |
-| ------------- | --------------------------------------------------------------------------- |
-| yarn dev      | Runs the app in the development mode.                                       |
-| yarn build    | Builds the app for production to the `dist` folder.                         |
-| yarn preview  | Builds the app for production to the `dist` folder, and run locally server. |
-| yarn lint     | Runs the Eslint and show code problems                                      |
-| yarn lint:fix | Runs the Eslint and fix the code problems                                   |
-| yarn format   | Runs the Prettier and fix code style                                        |
-| yarn compile  | Runs the TS Compiling                                                       |
-| yarn test     | Run the app tests.                                                          |
-| yarn commit   | Open the CZ CLI to create a message to your commit.                         |
+| Script             | Description                                                                 |
+| ------------------ | --------------------------------------------------------------------------- |
+| yarn dev           | Runs the app in the development mode.                                       |
+| yarn build         | Builds the app for production to the `dist` folder.                         |
+| yarn preview       | Builds the app for production to the `dist` folder, and run locally server. |
+| yarn preview:watch | Same as above but also watches for file changes.                            |
+| yarn lint          | Runs the Eslint and show code problems                                      |
+| yarn lint:fix      | Runs the Eslint and fix the code problems                                   |
+| yarn format        | Runs the Prettier and fix code style                                        |
+| yarn compile       | Runs the TS Compiling                                                       |
+| yarn test          | Run the app tests.                                                          |
+| yarn commit        | Open the CZ CLI to create a message to your commit.                         |
+
+## Microfrontend configuration
+
+This project is a host app that uses react-vite-micro-demo microfrontend.
+
+Run this project using `yarn dev` - runs vite local dev server on port 5000.
+Run react-vite-micro-demo using `yarn preview:watch` - runs vite preview and vite build and is watchng
+for file changes.
 
 ## License
 
