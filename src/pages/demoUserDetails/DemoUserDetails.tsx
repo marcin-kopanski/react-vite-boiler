@@ -1,14 +1,16 @@
 import { useQuery } from "@tanstack/react-query";
 import { useParams } from "react-router-dom";
-import { UserQueries } from "src/services/demo/UserService";
+import { DemoUserQueries } from "src/services/DemoUserService";
 
 export const DemoUserDetails = () => {
   const params = useParams<{ userId: string }>();
-  const { data, isLoading } = useQuery(UserQueries.getUser(params.userId || "-1"));
+  const { data, isLoading } = useQuery(
+    DemoUserQueries.getUser(params.userId || "-1"),
+  );
 
   return (
     <>
-      <div>User Details</div>
+      <div>Demo User Details</div>
       <div>{isLoading || !data ? <>Loading...</> : <div>{data.id}</div>}</div>
     </>
   );
