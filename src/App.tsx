@@ -1,17 +1,31 @@
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
-import { FC, lazy, PropsWithChildren, Suspense, useEffect, useState } from 'react';
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+import {
+  FC,
+  lazy,
+  PropsWithChildren,
+  ReactElement,
+  ReactNode,
+  Suspense,
+  useEffect,
+  useState,
+} from "react";
+import { SharedContextProvider } from "react-vite-shared-library";
 
 const queryClient = new QueryClient();
 
 const ReactQueryDevtoolsProduction = lazy(() =>
   // @ts-ignore
-  import('@tanstack/react-query-devtools/production').then((d) => ({
+  import("@tanstack/react-query-devtools/production").then((d) => ({
     default: d.ReactQueryDevtools,
   })),
 );
 
-export const App: FC<PropsWithChildren> = ({ children }) => {
+interface AppProps {
+  children: ReactNode;
+}
+
+export const App = ({ children }: AppProps) => {
   const [showDevtools, setShowDevtools] = useState(false);
 
   useEffect(() => {
@@ -21,7 +35,7 @@ export const App: FC<PropsWithChildren> = ({ children }) => {
 
   return (
     <QueryClientProvider client={queryClient}>
-      {children}
+      <SharedContextProvider>{children}</SharedContextProvider>
 
       <ReactQueryDevtools initialIsOpen />
       {showDevtools && (

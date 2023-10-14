@@ -1,9 +1,11 @@
 import { Link, Outlet } from "react-router-dom";
+import { useSessionContext } from "src/hooks/useSessionContext";
 
 export const MainLayout = () => {
+  const { user } = useSessionContext();
   return (
     <>
-      <div>Main Layout</div>
+      <div>Main Layout - Hello {user.name}</div>
       <div>
         <ul>
           <li>
