@@ -6,16 +6,28 @@ interface DemoUsersTableProps {
   currentPage: number;
   limit: number;
   total: number;
-  data: User[];
+  data: DemoUser[];
 }
 
-export const DemoUsersTable: FC<DemoUsersTableProps> = ({ isLoading, currentPage, limit, total, data }) => {
+export const DemoUsersTable: FC<DemoUsersTableProps> = ({
+  isLoading,
+  currentPage,
+  limit,
+  total,
+  data,
+}) => {
   const navigate = useNavigate();
 
   const paging = useMemo(() => {
-    const pages = Array.from({ length: Math.ceil(total / +limit) }, (_, i) => i + 1);
+    const pages = Array.from(
+      { length: Math.ceil(total / +limit) },
+      (_, i) => i + 1,
+    );
     return pages.map((page) => (
-      <button key={page} onClick={() => navigate(`?page=${page}&limit=${limit}`)}>
+      <button
+        key={page}
+        onClick={() => navigate(`?page=${page}&limit=${limit}`)}
+      >
         {page}
       </button>
     ));
@@ -44,7 +56,9 @@ export const DemoUsersTable: FC<DemoUsersTableProps> = ({ isLoading, currentPage
                 return (
                   <tr key={element.id}>
                     <td>
-                      <button onClick={() => navigate(`${element.id}`)}>Details</button>
+                      <button onClick={() => navigate(`${element.id}`)}>
+                        Details
+                      </button>
                     </td>
                     <td>{element.username}</td>
                     <td>{element.name}</td>

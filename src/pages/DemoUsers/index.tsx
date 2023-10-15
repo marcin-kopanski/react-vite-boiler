@@ -1,8 +1,8 @@
 import { useQuery } from "@tanstack/react-query";
 import { useSearchParams } from "react-router-dom";
+import { DemoUsersTable } from "src/pages/DemoUsers/components/DemoUsersTable";
 import { DemoUserQueries } from "src/services/DemoUserService";
 import { DEFAULT_LIMIT, DEFAULT_PAGE } from "src/utils/TableDefaults";
-import { DemoUsersTable } from "src/pages/demoUsers/components/DemoUsersTable";
 
 export const DemoUsers = () => {
   const [searchParams] = useSearchParams({

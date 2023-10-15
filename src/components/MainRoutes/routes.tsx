@@ -1,16 +1,16 @@
-import React, { Suspense } from "react";
-import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
+import React from "react";
+import { Outlet, createBrowserRouter } from "react-router-dom";
 import { queryClient } from "src/App";
 import { DemoLayout } from "src/layouts/DemoLayout";
 import { MainLayout } from "src/layouts/MainLayout";
 import { RootLayout } from "src/layouts/RootLayout";
-import { About } from "src/pages/about/About";
-import { Demo } from "src/pages/demo/Demo";
-import { DemoUserDetails } from "src/pages/demoUserDetails/DemoUserDetails";
-import { DemoUsers } from "src/pages/demoUsers/DemoUsers";
-import { Home } from "src/pages/home/Home";
-import { NoMatch } from "src/pages/noMatch/NoMatch";
-import { Root } from "src/pages/root/Root";
+import { About } from "src/pages/About";
+import { Demo } from "src/pages/Demo";
+import { DemoUserDetails } from "src/pages/DemoUserDetails";
+import { DemoUsers } from "src/pages/DemoUsers";
+import { Home } from "src/pages/Home";
+import { NoMatch } from "src/pages/NoMatch";
+import { Root } from "src/pages/Root";
 import {
   demoUserDetailsLoader,
   demoUsersLoader,
@@ -18,7 +18,7 @@ import {
 
 const MicroDemoRoutes = React.lazy(() => import("microDemo/Routes"));
 
-const routes = createBrowserRouter([
+export const routes = createBrowserRouter([
   {
     path: "/",
     element: <RootLayout />,
@@ -78,11 +78,3 @@ const routes = createBrowserRouter([
     element: <NoMatch />,
   },
 ]);
-
-export const MainRoutes = () => {
-  return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <RouterProvider router={routes} />
-    </Suspense>
-  );
-};
