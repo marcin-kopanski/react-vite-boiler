@@ -9,16 +9,16 @@ import {
 } from "react-router-dom";
 import { DemoLayout } from "src/layouts/DemoLayout";
 import { MainLayout } from "src/layouts/MainLayout";
-import { DemoUserQueries } from "src/services/DemoUserService";
-import { DEFAULT_LIMIT, DEFAULT_PAGE } from "src/utils/TableDefaults";
+import { RootLayout } from "src/layouts/RootLayout";
 import { About } from "src/pages/about/About";
 import { Demo } from "src/pages/demo/Demo";
 import { DemoUserDetails } from "src/pages/demoUserDetails/DemoUserDetails";
 import { DemoUsers } from "src/pages/demoUsers/DemoUsers";
 import { Home } from "src/pages/home/Home";
 import { NoMatch } from "src/pages/noMatch/NoMatch";
-import { RootLayout } from "src/layouts/RootLayout";
 import { Root } from "src/pages/root/Root";
+import { DemoUserQueries } from "src/services/DemoUserService";
+import { DEFAULT_LIMIT, DEFAULT_PAGE } from "src/utils/TableDefaults";
 
 const MicroDemoRoutes = React.lazy(() => import("microDemo/Routes"));
 

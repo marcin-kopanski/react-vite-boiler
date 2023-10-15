@@ -1,14 +1,14 @@
 import { FC } from "react";
-import { Link, Outlet, useLocation } from "react-router-dom";
+import { Outlet } from "react-router-dom";
+import { useSharedContext } from "react-vite-shared-library";
 import { RootBreadcrumbs } from "src/components/RootBreadcrumbs";
-import { SitePages } from "src/constants/SitePagesMap";
 
 export const RootLayout: FC = () => {
-  const location = useLocation();
+  const { user } = useSharedContext();
 
   return (
     <>
-      <header>Root Layout</header>
+      <header>Root Layout - {user.name}</header>
       <header>
         <RootBreadcrumbs />
       </header>

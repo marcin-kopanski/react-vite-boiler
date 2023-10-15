@@ -1,15 +1,6 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
-import {
-  FC,
-  lazy,
-  PropsWithChildren,
-  ReactElement,
-  ReactNode,
-  Suspense,
-  useEffect,
-  useState,
-} from "react";
+import { ReactNode, Suspense, lazy, useEffect, useState } from "react";
 import { SharedContextProvider } from "react-vite-shared-library";
 
 const queryClient = new QueryClient();

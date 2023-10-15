@@ -1,5 +1,5 @@
-import react from "@vitejs/plugin-react";
 import federation from "@originjs/vite-plugin-federation";
+import react from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
 import tsconfigPaths from "vite-tsconfig-paths";
 
@@ -9,14 +9,23 @@ export default defineConfig({
     react(),
     federation({
       name: "main-app",
-      remotes: {
-        microDemo: {
-          external: "http://localhost:5002/assets/microDemo.js",
-          from: "vite",
-          externalType: "url",
+      remotes: [
+        {
+          microDemo: {
+            external: "http://localhost:5010/assets/microDemo.js",
+            from: "vite",
+            externalType: "url",
+          },
         },
-      },
-      shared: ["react", "react-router-dom"],
+        {
+          microState: {
+            external: "http://localhost:5011/assets/microState.js",
+            from: "vite",
+            externalType: "url",
+          },
+        },
+      ],
+      shared: ["react", "react-router-dom", "react-vite-shared-library"],
     }),
     tsconfigPaths(),
   ],
