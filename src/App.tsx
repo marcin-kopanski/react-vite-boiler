@@ -3,7 +3,7 @@ import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { ReactNode, Suspense, lazy, useEffect, useState } from "react";
 import { SharedContextProvider } from "react-vite-shared-library";
 
-const queryClient = new QueryClient();
+export const queryClient = new QueryClient();
 
 const ReactQueryDevtoolsProduction = lazy(() =>
   // @ts-ignore
