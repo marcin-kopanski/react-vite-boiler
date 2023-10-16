@@ -1,6 +1,6 @@
 import { QueryClient } from "@tanstack/react-query";
 import { LoaderFunction, LoaderFunctionArgs } from "react-router-dom";
-import { DEFAULT_LIMIT, DEFAULT_PAGE } from "src/utils/TableDefaults";
+import { DEFAULT_LIMIT, DEFAULT_PAGE } from "src/constants/TableDefaults";
 import { DemoUserQueries } from "./DemoUserService";
 
 export const demoUsersLoader =

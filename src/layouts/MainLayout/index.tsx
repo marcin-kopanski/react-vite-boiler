@@ -4,11 +4,11 @@ import { Link, Outlet } from "react-router-dom";
 import { SharedContext } from "react-vite-shared-library";
 
 export const MainLayout = () => {
-  const context = useContext(SharedContext);
+  const {state} = useContext(SharedContext);
 
   return (
     <>
-      <div>Main Layout - Hello {context?.user.name}</div>
+      <div>Main Layout - Hello {state?.user.name}</div>
       <div>
         <ul>
           <li>

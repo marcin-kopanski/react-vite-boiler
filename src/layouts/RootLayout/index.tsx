@@ -4,11 +4,11 @@ import { useSharedContext } from "react-vite-shared-library";
 import { RootBreadcrumbs } from "src/components/RootBreadcrumbs";
 
 export const RootLayout: FC = () => {
-  const { user } = useSharedContext();
+  const { state } = useSharedContext();
 
   return (
     <>
-      <header>Root Layout - {user.name}</header>
+      <header>Root Layout - {state?.user.name}</header>
       <header>
         <RootBreadcrumbs />
       </header>
