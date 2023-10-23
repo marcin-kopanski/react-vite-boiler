@@ -1,13 +1,13 @@
 {
-  "name": "viterc",
+  "name": "react-vite-boiler",
   "private": false,
-  "version": "1.2.0",
+  "version": "1.0.0",
   "description": "A modern minimal Vite + React + TypeScript template with pre-configured ESLint (with Airbnb JS/React rules), Prettier, Testing with Jest and Git hooks with Husky out of the box 📦",
   "license": "MIT",
   "author": {
-    "name": "Patrick Jean Meurer",
-    "email": "patrickjmeurer@gmail.com",
-    "url": "https://github.com/potreco"
+    "name": "Marcin Kopański",
+    "email": "marcin.kopanski@gmail.com",
+    "url": "https://github.com/marcin-kopanski"
   },
   "scripts": {
     "postinstall": "husky install",
